@@ -9,5 +9,7 @@ public class CaptureFailedScreenshotTest extends BaseTest {
     public void testClickingSubmitButtonWithoutJavaScriptExecutor(){
         var practiceFormPage = homePage.goToForms().clickPracticeForm();
         practiceFormPage.clickSubmitButton();
+
+
     }
 }
