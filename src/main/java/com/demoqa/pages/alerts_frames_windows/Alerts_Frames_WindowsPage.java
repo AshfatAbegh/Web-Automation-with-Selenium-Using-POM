@@ -9,6 +9,13 @@ import org.openqa.selenium.By;
 public class Alerts_Frames_WindowsPage extends HomePage {
 
     private By modalDialogsMenuItem = By.xpath("//div[@class='element-list collapse show']//li[@id='item-4']");
+    private By alertsMenuItem = By.xpath("//li[@id='item-1']/span[text()='Alerts']");
+
+    public AlertsPage clickAlerts(){
+        scrollToElementJS(alertsMenuItem);
+        click(alertsMenuItem);
+        return new AlertsPage();
+    }
 
     public ModalDialogsPage clickModalDialogs(){
         scrollToElementJS(modalDialogsMenuItem);
