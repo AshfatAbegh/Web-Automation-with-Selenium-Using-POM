@@ -10,6 +10,13 @@ public class WidgetsPage extends HomePage {
     private By selectMenuItem =By.xpath("//div[@class='element-list collapse show']//li[@id='item-8']");
     private By datePickerMenuItem = By.xpath("//div[@class='element-list collapse show']//li[@id='item-2']");
     private By progressBarMenuItem = By.xpath("//li[@id='item-4']/span[text()='Progress Bar']");
+    private By sliderMenuItem = By.xpath("//li[@id='item-3']/span[text()='Slider']");
+
+    public SliderPage clickSlider(){
+        scrollToElementJS(sliderMenuItem);
+        click(sliderMenuItem);
+        return new SliderPage();
+    }
 
     public ProgressBarPage clickProgressBar(){
         scrollToElementJS(progressBarMenuItem);
