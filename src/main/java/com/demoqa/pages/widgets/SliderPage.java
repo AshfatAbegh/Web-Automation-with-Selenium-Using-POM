@@ -3,6 +3,7 @@ package com.demoqa.pages.widgets;
 import org.openqa.selenium.By;
 import org.openqa.selenium.interactions.Actions;
 
+import static utilities.ActionsUtility.dragAndDropBy;
 import static utilities.GetUtility.getAttribute;
 
 public class SliderPage extends WidgetsPage{
@@ -15,8 +16,9 @@ public class SliderPage extends WidgetsPage{
     }
 
     public void moveSlider(int x, int y){
-        Actions act = new Actions(driver);
-        act.dragAndDropBy(find(slider), x, y).perform();
+//        Actions act = new Actions(driver);
+//        act.dragAndDropBy(find(slider), x, y).perform();
+        dragAndDropBy(find(slider), x, y);
         //act.perform(); - similar to above line
     }
 }
